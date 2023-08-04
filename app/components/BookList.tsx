@@ -8,7 +8,6 @@ import InfiniteScroll from 'react-infinite-scroller';
 import { RotatingSquare, TailSpin } from 'react-loader-spinner';
 import { useSetRecoilState } from 'recoil';
 import { booksLoading } from '@/lib/state/BookListState';
-import ReactPullToRefresh from 'react-pull-to-refresh';
 
 export default function BookList() {
     const [page, setPage] = useState(1);
@@ -61,8 +60,6 @@ export default function BookList() {
                     setPage(-1)
                     return;
                 };
-
-                console.log(res.data)
 
                 setBooks([...books, ...res.data]);
 
@@ -122,7 +119,6 @@ export default function BookList() {
         };
     });
 
-    console.log({ time: pullChange / 3.118 })
 
 
     return (
