@@ -56,7 +56,7 @@ export default function BookList() {
                     throw Error("Connection interrupted")
                 };
 
-                if (res.data.length == 0) {
+                if (res.data && res.data.length == 0) {
                     setPage(-1)
                     return;
                 };
@@ -87,11 +87,13 @@ export default function BookList() {
                     return err;
                 });
 
+                console.log(res.data);
                 if (res.err || !res.data) {
                     throw Error("Connection interrupted")
                 };
 
-                if (res.data.length == 0) {
+                if (res.data && res.data.length == 0) {
+
                     setPage(-1)
                     return;
                 };
@@ -120,12 +122,11 @@ export default function BookList() {
     });
 
 
-
     return (
         <div className="w-full px-4">
 
             <div
-                className=" w-full flex flex-row items-center justify-center"
+                className="flex flex-row items-center justify-center w-full "
                 style={{ marginTop: pullChange / 3.118, }}
             >
                 <div className="p-2 rounded-full">
@@ -159,7 +160,7 @@ export default function BookList() {
                 loadMore={fetchBooks}
                 hasMore={page != -1}
 
-                className="grid grid-cols-2 gap-y-2 gap-x-2 w-full sm:grid-cols-3 md:grid-cols-4"
+                className="grid w-full grid-cols-2 gap-y-2 gap-x-2 sm:grid-cols-3 md:grid-cols-4"
             >
                 {books.map((book, index) => (
                     <Card
@@ -170,7 +171,7 @@ export default function BookList() {
                     />
                 ))}{' '}
                 {fetching && books.length != 0 && (
-                    <div className='w-full flex flex-row items-center justify-center'>
+                    <div className='flex flex-row items-center justify-center w-full'>
 
                         <TailSpin
                             height="80"

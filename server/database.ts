@@ -8,7 +8,6 @@ import { UserBook } from './entity/userBook';
 
 dotenv.config();
 
-console.log(`The following username must be posgresprocess.env.USERNAME`);
 const sequelize = new Sequelize({
   dialect: 'postgres',
   database: 'postgres',
