@@ -13,7 +13,7 @@
 
 # Overview
 
-## Assessment Project
+## Awesome8 Assessment Project
 
 ### Stack Used
 - Next.js (React)
