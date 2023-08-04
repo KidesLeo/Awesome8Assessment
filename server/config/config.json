@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "eZW28c%u@WW@spJ*",
+    "database": "postgres",
+    "host": "db.gtlfdtnecneclvmvguix.supabase.co",
+    "dialect": "postgres"
+  }
+}
