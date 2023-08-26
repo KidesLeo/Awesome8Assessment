@@ -32,7 +32,6 @@ To run
 - `yarn` for the client
     - then `yarn dev`
 - Create a `.env` based on the example for the server
-    - I will attach credentials in the email
     - `yarn`
         - `yarn dev` or `yarn watch` for server restart
 - Api docs are at /api-docs
