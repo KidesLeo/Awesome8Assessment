@@ -13,7 +13,7 @@
 
 # Overview
 
-## Awesome8 Assessment Project
+## A Template Full Stack Typescript App 
 
 ### Stack Used
 - Next.js (React)
